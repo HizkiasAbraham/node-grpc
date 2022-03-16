@@ -1,0 +1,15 @@
+syntax = "proto3";
+package calculator;
+
+service Calculator {
+    rpc add (CalculationRequest) returns (CalculationResult);
+    rpc multiply (CalculationRequest) returns (CalculationResult);
+}
+
+message CalculationRequest {
+    repeated float paramsList = 1;
+}
+
+message CalculationResult {
+    float result = 1;
+}   
