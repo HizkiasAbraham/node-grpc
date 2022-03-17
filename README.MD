@@ -11,8 +11,14 @@ This is a mini proof of concept app I developed while learning integrating grpc 
 ```
 ##### Demo
 
-- Invalid input
+- Start server
+![Start server](assets/start_server.png)
 
-- Addition input
+- Invalid command
+![Invalid command](assets/invalid_command.png)
+
+- Addition command
+![Addition command](assets/addition_command.png)
 
 - multiplication input
+![Multiplication command](assets/multiplication_command.png)
