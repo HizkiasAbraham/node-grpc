@@ -1,4 +1,4 @@
-const PROTO_PATH = "./service.proto"
+const PROTO_PATH = __dirname + "/service.proto"
 const grpc = require("@grpc/grpc-js")
 const protoLoader = require("@grpc/proto-loader")
 
@@ -12,6 +12,4 @@ const protoDescription = grpc.loadPackageDefinition(
   })
 )
 
-module.exports = {
-  protoDescription,
-}
+module.exports = protoDescription

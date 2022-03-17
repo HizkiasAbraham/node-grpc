@@ -1,9 +1,9 @@
 const grpc = require("@grpc/grpc-js")
-const { registerService } = require("./grpc/registerServices")
+const { registerServices } = require("../grpc/registerServices")
 
 let server = new grpc.Server()
 
-server = registerService(server)
+server = registerServices(server)
 
 server.bindAsync(
   "0.0.0.0:55258",

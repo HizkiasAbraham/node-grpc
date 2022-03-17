@@ -1,11 +1,11 @@
 const calculatorImpl = require("./impl/calculator")
-const { protoDescription } = require("../protoDescriptor")
+const proto = require("../proto")
 
-const Calculator = protoDescription?.calculator?.Calculator
+const Calculator = proto?.calculator?.Calculator
 
-const registerService = (server) => {
+const registerServices = (server) => {
   server.addService(Calculator.service, calculatorImpl)
   return server
 }
 
-module.exports = { registerService }
+module.exports = { registerServices }

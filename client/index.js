@@ -1,5 +1,5 @@
 const grpc = require("@grpc/grpc-js")
-const { protoDescription } = require("./protoDescriptor")
+const proto = require("../proto")
 
 const args = process.argv.splice(2, process.argv.length)
 if (args.length < 3)
@@ -9,7 +9,7 @@ let paramsList = args.slice(1, args.length)
 paramsList = paramsList.map((val) => parseFloat(val))
 
 try {
-  const client = new protoDescription.calculator.Calculator(
+  const client = new proto.calculator.Calculator(
     "0.0.0.0:55258",
     grpc.credentials.createInsecure()
   )
